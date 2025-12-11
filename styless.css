@@ -1,0 +1,133 @@
+
+/* ===========================
+   Fuentes personalizadas
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* ===========================
+   Paleta Bulbasaur (variables)
+   =========================== */
+/* Hex verificados de paletas públicas: SchemeColor y Color-Hex */
+:root {
+  --bulba-green: #89C893;   /* Verde claro (Bulbasaur) - SchemeColor */
+  --bulba-light: #92D1B3;   /* Turquesa verdoso - SchemeColor */
+  --bulba-deep:  #49896F;   /* Aguamarina profunda - SchemeColor */
+  --bulba-accent:#B74555;   /* Acento rojizo (ojos) - SchemeColor */
+  --bulba-alt1:  #83BA36;   /* Verde alterno - ColorHex */
+  --bulba-alt2:  #70E0BB;   /* Turquesa brillante - ColorHex */
+
+  --bg: #e9f6f1;            /* Fondo suave */
+  --text: #1f2d2a;          /* Texto principal */
+  --muted: #3b5b4f;         /* Texto secundario */
+  --shadow: 0 10px 24px rgba(73,137,111,0.22); /* Sombra con bulba-deep */
+}
+
+/*
+   Reset básico + tipografía
+*/
+* { box-sizing: border-box; }
+html { font-size: 16px; }            /* base para rem */
+body {
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg) 0%, #f3fbf7 100%);
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 4vh 6vw;                  /* vh/vw: según viewport */
+  max-width: 72ch;                   /* ch: ancho óptimo de lectura */
+  margin-inline: auto;               /* centra el contenido */
+}
+
+/* 
+   Títulos
+*/
+.title {
+  font-family: 'Baloo 2', cursive;   /* fuente personalizada para que “se sienta como tú” */
+  font-weight: 700;
+  font-size: clamp(1.8rem, 6vw, 3rem); /* rem + vw responsivo */
+  color: var(--bulba-deep);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;            /* em relativo al tamaño del tipo */
+}
+
+.section-title {
+  font-family: 'Baloo 2', cursive;
+  color: var(--bulba-deep);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/*
+   Biografía
+*/
+.bio {
+  font-size: 1rem;                   /* rem coherente con accesibilidad */
+  color: var(--text);
+  background: #fff;
+  border: 2px solid var(--bulba-light); /* px */
+  border-radius: 14px;                  /* px */
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+/* 
+   Imagen / Avatar
+ */
+.avatar {
+  display: block;
+  border-radius: 18px;                      /* px */
+  border: 3px solid var(--bulba-green);     /* px */
+
+  /* Estilizar imagen con filtros sutiles */
+
+  filter: saturate(1.05) contrast(1.02) drop-shadow(0 8px 12px rgba(0,0,0,0.12));
+  width: min(200px, 40vw);                  /* px y vw */
+  height: auto;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/*
+   Lista de hobbies (check)
+*/
+.list-check {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.list-check li {
+  position: relative;
+  padding-left: 2.2em;     /* em para icono pseudo-elemento */
+  margin: 0.4rem 0;
+}
+.list-check li::before {
+  content: "✔";
+  color: var(--bulba-alt1);
+  position: absolute;
+  left: 0.6em;             /* em */
+  top: 0;
+  font-weight: 700;
+}
+
+/*
+   Música favorita
+*/
+.music-list {
+  padding-left: 1.2rem;    /* rem */
+}
+.music-list a {
+  color: var(--bulba-deep);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 200ms ease, color 200ms ease;
+  font-weight: 500;
+}
+.music-list a:hover {
+  color: var(--bulba-accent);
+  border-color: var(--bulba-accent);
+}
+
+/* Efecto “grass-type” al pasar el mouse por la biografía */
+
+.bio:hover {
+  border-color: var(--bulba-alt2);
+}
