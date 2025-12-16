@@ -1,44 +1,50 @@
-<!-- Aquí va tu información-->
+<!-- Se agrega vinculación al CSS externo y se corrigen/añaden detalles semánticos -->
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Se mantiene el idioma español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de mí</title>
+  <meta charset="UTF-8"> <!-- Charset correcto -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta viewport correcta -->
+  <title>Acerca de mí</title> <!-- Título sin cambios de contenido -->
+
+  <!-- Se agrega hoja de estilos externa para aplicar paleta Bulbasaur, fuentes y personalización -->
+  <link rel="stylesheet" href="styless.css">
+
 </head>
 <body>
-    <!-- Encabezado principal con tu nombre -->
-    <h1>Roberto Carlos Melendez Mayen</h1>
+  <!-- Encabezado principal con  nombre (se mantiene y se le aplica clase para estilo) -->
+  <h1 class="title">Roberto Carlos Melendez Mayen</h1> <!-- Se añade clase .title para fuente personalizada -->
 
-    <!-- Foto tuya -->
+  <!-- Foto  -->
     <img src="img/Ro.jpg" alt="Foto de Roberto" width="200">
 
-    <!-- Biografía -->
-    <p>
-        Soy Roberto, estudiante apasionado por la tecnología y el desarrollo web, bastante curioso 
-        del mundo y todo lo que existe en él.
-        Me gusta aprender cosas nuevas y mejorar cada día. Actualmente estoy practicando HTML.
-    </p>
 
-    <!-- Hobbies -->
-    <h2>Mis hobbies</h2>
-    <ul>
-        <li>Ver anime</li>
-        <li>Escuchar música</li>
-        <li>Patinar</li>
-        <li>Jugar fútbol</li>
-        <li>Cocinar</li>
-    </ul>
+  <!-- Biografía (se mantiene texto, se añade una clase para estilos y mejor legibilidad) -->
+  <p class="bio">
+    Soy Roberto, estudiante apasionado por la tecnología y el desarrollo web, bastante curioso
+    del mundo y todo lo que existe en él.
+    Me gusta aprender cosas nuevas y mejorar cada día. Actualmente estoy practicando HTML.
+  </p>
 
-    <!-- Música favorita -->
-    <h2>Mi música favorita</h2>
-    <ol>
-        <li>https://www.youtube.com/watch?v=szeA9tvItJY&list=RDszeA9tvItJY&start_radio=1</a></li>
-        <li>https://www.youtube.com/watch?v=kP6_nlTdPgI&list=RDkP6_nlTdPgI&start_radio=1</a></li>
-        <li>https://www.youtube.com/watch?v=lY2yjAdbvdQ&list=RDlY2yjAdbvdQ&start_radio=1</a></li>
-        <li>https://www.youtube.com/watch?v=ghAvJMxE1qo&list=RDghAvJMxE1qo&start_radio=1</a></li>
-        <li>https://www.youtube.com/watch?v=pj2ntDiXJCk&list=RDpj2ntDiXJCk&start_radio=1</a></li>
-    </ol>
+  <!-- Hobbies (se mantiene estructura; se añade clase para personalización visual) -->
+  <h2 class="section-title">Mis hobbies</h2> <!-- Se añade clase para estilizar títulos secundarios -->
+  <ul class="list-check"> <!-- Se convierte la lista en estilo tipo “check” -->
+    <li>Ver anime</li>
+    <li>Escuchar música</li>
+    <li>Patinar</li>
+    <li>Jugar fútbol</li>
+    <li>Cocinar</li>
+  </ul>
+
+  
+<!-- Música favorita -->
+<h2>Mi música favorita</h2>
+<ol class="music-list">
+  <li><a href="https://www.youtube.com/watch?v=szeA9tvItJY&list=RDszeA9tvItJY&start_radio=1" target="_blank" rel="noopener">Playlist 1</a></li>
+  <li><a href="https://www.youtube.com/watch?v=kP6_nlTdPgI&list=RDkP6_nlTdPgI&start_radio=1" target="_blank" rel="noopener">Playlist 2</a></li>
+  <li><a href="https://www.youtube.com/watch?v=lY2yjAdbvdQ&list=RDlY2yjAdbvdQ&start_radio=1" target="_blank" rel="noopener">Playlist 3</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ghAvJMxE1qo&list=RDghAvJMxE1qo&start_radio=1" target="_blank" rel="noopener">Playlist 4</a></li>
+  <li><a href="https://www.youtube.com/watch?v=pj2ntDiXJCk&list=RDpj2ntDiXJCk&start_radio=1" target="_blank" rel="noopener">Playlist 5</a></li>
+</ol>
 </body>
 </html>
